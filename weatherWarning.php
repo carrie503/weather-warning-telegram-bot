@@ -157,7 +157,6 @@
         $language = getUserLanguage($chat_id);
         $functName = "current";
         $url = urlLanguage($functName, $language);
-        apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "$url"));
         $xml = simplexml_load_file($url);
         $content = $xml->channel->item->description;
         $content = strip_tags($content);
