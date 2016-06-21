@@ -171,7 +171,7 @@
         $xml = simplexml_load_file($url);
         $item = $xml->channel->item;
         $i = 0;
-        while($item[$i] -> title != "") {
+        while($item[$i]->title != "") {
              $title = $item[$i] -> title;
              $content .= "$title\n";
              $i++;
