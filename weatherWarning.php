@@ -245,7 +245,7 @@
             }
         } else if($text === "@bot english") {
             if($subUser) {
-                $sql = "UPDATE subscribers SET language = 'Simple. Chinese' WHERE user_id = $chat_id";
+                $sql = "UPDATE subscribers SET language = 'English' WHERE user_id = $chat_id";
                 if ($conn->query($sql) === TRUE) {
                     apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "OK"));
                 }
